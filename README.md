@@ -80,6 +80,7 @@ Spaceship is a minimalistic, powerful and extremely customizable [Zsh][zsh-url] 
 * Indicator for jobs in the background (`✦`).
 * Current Node.js version, through nvm/nodenv/n (`⬢`).
 * Current Ruby version, through rvm/rbenv/chruby/asdf (`💎`).
+* Current Elm version (`🌳`)
 * Current Elixir version, through kiex/exenv/elixir (`💧`).
 * Current Swift version, through swiftenv (`🐦`).
 * Current Xcode version, through xenv (`🛠`).
@@ -96,6 +97,7 @@ Spaceship is a minimalistic, powerful and extremely customizable [Zsh][zsh-url] 
 * Current .NET SDK version, through dotnet-cli (`.NET`).
 * Current Ember.js version, through ember-cli (`🐹`).
 * Current Kubectl context (`☸️`).
+* Current Terraform workspace (`🛠`).
 * Package version, if there's is a package in current directory (`📦`).
 * Current battery level and status:
   * `⇡` - charging;
@@ -110,10 +112,10 @@ Want more features? Please, [open an issue](https://github.com/denysdovhan/space
 
 ## Requirements
 
-For correct work you will first need:
+To work correctly, you will first need:
 
 * [`zsh`](http://www.zsh.org/) (v5.2 or recent) must be installed.
-* [Powerline Font](https://github.com/powerline/fonts) must be installed and used in your terminal.
+* [Powerline Font](https://github.com/powerline/fonts) must be installed and used in your terminal (for example, switch font to [Fira Code](https://github.com/tonsky/FiraCode)).
 
 ## Installing
 
@@ -125,7 +127,7 @@ npm install -g spaceship-prompt
 
 Done. This command should link `spaceship.zsh` as `prompt_spaceship_setup` to your `$fpath` and set `prompt spaceship` in `.zshrc`. Just reload your terminal.
 
-**💡 Tip:** Update Spaceship to new versions as any other package.
+**💡 Tip:** Update Spaceship to new versions as you would any other package.
 
 ### [oh-my-zsh]
 
@@ -195,7 +197,7 @@ makepkg -si
 
 ### Manual
 
-If you have problems with approches above, follow these instructions:
+If you have problems with approaches above, follow these instructions:
 
 * Clone this repo `git clone https://github.com/denysdovhan/spaceship-prompt.git`
 * Symlink `spaceship.zsh` to somewhere in [`$fpath`](http://www.refining-linux.org/archives/46/ZSH-Gem-12-Autoloading-functions/) as `prompt_spaceship_setup`.
@@ -242,7 +244,7 @@ Also, take a look at popular option presets or share your own configuration on [
 
 ## Troubleshooting
 
-Have a trouble? Take a look at out [Troubleshooting](./docs/Troubleshooting.md) page.
+Having trouble? Take a look at out [Troubleshooting](./docs/Troubleshooting.md) page.
 
 Still struggling? Please, [file an issue](https://github.com/denysdovhan/spaceship-prompt/issues/new/choose), describe your problem and we will gladly help you.
 
@@ -254,7 +256,7 @@ Still struggling? Please, [file an issue](https://github.com/denysdovhan/spacesh
 
 ## Donate
 
-Hi! I work on this project in my spare time, beside my primary job. I hope you enjoy using Spaceship, and if you do, please, [buy me a cup of tea ☕️][donate-card-url].
+Hi! I work on this project in my spare time, in addition to my primary job. I hope you enjoy using Spaceship. If you do, please, [buy me a cup of tea ☕️][donate-card-url].
 
 | Credit/Debit card | Bitcoin | Ethereum |
 |:-----------------:|:-------:|:--------:|
