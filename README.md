@@ -25,6 +25,11 @@
     <img src="https://img.shields.io/badge/zsh-%3E%3Dv5.2-777777.svg?style=flat-square"
       alt="Zsh Version" />
   </a>
+  
+  <a href="https://twitter.com/SpaceshipZSH">
+    <img src="https://img.shields.io/badge/twitter-%40SpaceshipZSH-00ACEE.svg?style=flat-square"
+      alt="Spaceship ZSH Twitter" />
+  </a>
 
   <a href="#donate">
     <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?style=flat-square"
@@ -110,6 +115,8 @@ Spaceship is a minimalistic, powerful and extremely customizable [Zsh][zsh-url] 
 
 Want more features? Please, [open an issue](https://github.com/denysdovhan/spaceship-prompt/issues/new/choose) or send pull request.
 
+**💡 Tip:** Follow our Twitter to keep yourself updated about new features, improvements, and bugfixes.  
+
 ## Requirements
 
 To work correctly, you will first need:
@@ -156,7 +163,7 @@ Set `ZSH_THEME="spaceship"` in your `.zshrc`.
 Add the following snippet in your `~/.zshrc`:
 
 ```
-antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
+antigen theme denysdovhan/spaceship-prompt
 ```
 
 ### [antibody]
@@ -247,6 +254,12 @@ Also, take a look at popular option presets or share your own configuration on [
 Having trouble? Take a look at out [Troubleshooting](./docs/Troubleshooting.md) page.
 
 Still struggling? Please, [file an issue](https://github.com/denysdovhan/spaceship-prompt/issues/new/choose), describe your problem and we will gladly help you.
+
+## Related Projects
+
+Here's a list of related projects that have been inspired by Spaceship ZSH.
+
+- [**matchai/spacefish**](https://github.com/matchai/spacefish) - A port of Spaceship ZSH for fish shell intending to achieve complete feature parity.
 
 ## Team
 
