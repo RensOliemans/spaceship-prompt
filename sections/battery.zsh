@@ -15,7 +15,7 @@
 # | charged                | shown           | hidden          | shown         |
 # ------------------------------------------------------------------------------
 
-SPACESHIP_BATTERY_SHOW="${SPACESHIP_BATTERY_SHOW=true}"
+SPACESHIP_BATTERY_SHOW="${SPACESHIP_BATTERY_SHOW=always}"
 SPACESHIP_BATTERY_PREFIX="${SPACESHIP_BATTERY_PREFIX=""}"
 SPACESHIP_BATTERY_SUFFIX="${SPACESHIP_BATTERY_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"}"
 SPACESHIP_BATTERY_SYMBOL_CHARGING="${SPACESHIP_BATTERY_SYMBOL_CHARGING="⇡"}"
@@ -72,6 +72,7 @@ spaceship_battery() {
 
   # Remove trailing % and symbols for comparison
   battery_percent="$(echo $battery_percent | tr -d '%[,;]')"
+  battery_status="$(echo $battery_status | tr -d ',')" 
 
   # Change color based on battery percentage
   if [[ $battery_percent == 100 || $battery_status =~ "(charged|full)" ]]; then
