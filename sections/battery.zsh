@@ -56,7 +56,7 @@ spaceship_battery() {
 	# If battery is 0% charge, battery likely doesn't exist.
     [[ $battery_percent == "0%," ]] && return
 
-    battery_status="$( echo $battery_data | awk '{print tolower($3)}' )"
+    battery_status="$( echo $battery_data | awk '{print tolower($3)}' | tr -d ',')"
   elif spaceship::exists upower; then
     local battery=$(command upower -e | grep battery | head -1)
 
@@ -72,7 +72,6 @@ spaceship_battery() {
 
   # Remove trailing % and symbols for comparison
   battery_percent="$(echo $battery_percent | tr -d '%[,;]')"
-  battery_status="$(echo $battery_status | tr -d ',')" 
 
   # Change color based on battery percentage
   if [[ $battery_percent == 100 || $battery_status =~ "(charged|full)" ]]; then
