@@ -7,7 +7,7 @@
 
 # Current version of Spaceship
 # Useful for issue reporting
-export SPACESHIP_VERSION='3.9.0'
+export SPACESHIP_VERSION='3.11.2'
 
 # Common-used variable for new line separator
 NEWLINE='
@@ -60,12 +60,13 @@ if [ -z "$SPACESHIP_PROMPT_ORDER" ]; then
     julia         # Julia section
     docker        # Docker section
     aws           # Amazon Web Services section
+    gcloud        # Google Cloud Platform section
     venv          # virtualenv section
     conda         # conda virtualenv section
     pyenv         # Pyenv section
     dotnet        # .NET section
     ember         # Ember.js section
-    kubecontext   # Kubectl context section
+    kubectl       # Kubectl context section
     terraform     # Terraform workspace section
     exec_time     # Execution time
     line_sep      # Line break
@@ -118,7 +119,7 @@ for section in $(spaceship::union $SPACESHIP_PROMPT_ORDER $SPACESHIP_RPROMPT_ORD
     # Custom section is declared, nothing else to do
     continue
   else
-    echo "Section '$section' have not been loaded."
+    echo "Section '$section' was not loaded."
   fi
 done
 

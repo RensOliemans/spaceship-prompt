@@ -15,9 +15,9 @@ This is not an issue with Spaceship prompt. Spaceship uses Unicode symbols to re
 
 * Verify your terminal emulator support Unicode characters with this command:
   ```zsh
-  curl http://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-demo.txt
+  curl -L https://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-demo.txt
   # or
-  wget -O - http://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-demo.txt
+  wget -O - https://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-demo.txt
   ```
 * Configure your terminal emulator to use UTF-8 as character encoding.
 
@@ -66,12 +66,13 @@ SPACESHIP_PROMPT_ORDER=(
   # julia       # Julia section (Disabled)
   # docker      # Docker section (Disabled)
   aws           # Amazon Web Services section
+  gcloud        # Google Cloud Platform section
   venv          # virtualenv section
   conda         # conda virtualenv section
   pyenv         # Pyenv section
   dotnet        # .NET section
   # ember       # Ember.js section (Disabled)
-  kubecontext   # Kubectl context section
+  kubectl       # Kubectl context section
   terraform     # Terraform workspace section
   exec_time     # Execution time
   line_sep      # Line break
