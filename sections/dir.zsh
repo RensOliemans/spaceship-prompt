@@ -29,6 +29,11 @@ spaceship_dir() {
   # Threat repo root as a top-level directory or not
   if [[ $SPACESHIP_DIR_TRUNC_REPO == true ]] && spaceship::is_git; then
     local git_root=$(git rev-parse --show-toplevel)
+
+    if (cygpath --version) >/dev/null 2>/dev/null; then
+      git_root=$(cygpath -u $git_root)
+    fi
+
     # Check if the parent of the $git_root is "/"
     if [[ $git_root:h == / ]]; then
       trunc_prefix=/
